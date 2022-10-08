@@ -1,0 +1,50 @@
+<h1 class="title">Lista De Jugadores</h1>
+
+<details class="detail">
+  <summary>Agregar nuevo jugador</summary>
+  <br>
+  <table>
+    <tr>
+      <th>Id Jugador</th>
+      <th>Codigo</th>
+      <th>Nombres</th>
+      <th>Camiseta</th>
+      <th>Campeonato</th>
+      <th>Id Equipo</th>
+      <th>Codigo Equipo</th>
+      <th>Nombre Equipo</th>
+    </tr>
+    <tr>
+      <td><input type="number" placeholder="idJugador" name="idJugador" id="idJugador" [(ngModel)]="inputIdPlayer"></td>
+      <td><input type="string" placeholder="Codigo" name="codigo" id="codigo" [(ngModel)]="inputCode"></td>
+      <td><input type="text" placeholder="Nombres" name="nombres" id="nombres" [(ngModel)]="inputName"></td>
+      <td><input type="text" placeholder="Camiseta" name="camiseta" id="camiseta" [(ngModel)]="inputTshirt"></td>
+      <td><input type="text" placeholder="Campeonatos" name="campeonatos" id="campeonatos"
+          [(ngModel)]="inputChampionship"></td>
+      <td><input type="number" placeholder="Equipo" name="equipo" id="equipo" [(ngModel)]="inputTeam"></td>
+      <td><input type="text" placeholder="codigoEquipo" name="codigoEquipo" id="codigoEquipo" [(ngModel)]="inputCodeTeam">
+      </td>
+      <td><input type="text" placeholder="nombreEquipo" name="nombreEquipo" id="nombreEquipo" [(ngModel)]="inputNameTeam">
+      </td>
+
+    </tr>
+
+
+  </table>
+  <div class="container-button">
+    <div class="buttons">
+      <button type="submit" class="update" (click)="crearPlayer()">Agregar</button>
+    </div>
+
+  </div>
+</details>
+
+<button class="refresh" type="submit" (click)="refresh()">Refrescar</button>
+<div class="add-container">
+
+</div>
+<br>
+
+<app-info-players *ngFor="let player of players; let i=index" [playerList]="player" [indice]="i"></app-info-players>
+
+

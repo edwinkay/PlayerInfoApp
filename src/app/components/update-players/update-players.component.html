@@ -1,0 +1,38 @@
+<h1 class="title">actualiza o elimina jugador</h1>
+
+<table>
+  <tr>
+    <th>Id Jugador</th>
+    <th>Codigo</th>
+    <th>Nombres</th>
+    <th>Camiseta</th>
+    <th>Campeonato</th>
+    <th>Id Equipo</th>
+    <th>Codigo E.</th>
+    <th>Nombre E.</th>
+  </tr>
+  <tr>
+    <td><input type="number" placeholder="idJugador" name="idJugador" id="idJugador" [(ngModel)]="inputIdPlayer"></td>
+    <td><input type="string" placeholder="Codigo" name="codigo" id="codigo" [(ngModel)]="inputCode"></td>
+    <td><input type="text" placeholder="Nombres" name="nombres" id="nombres" [(ngModel)]="inputName"></td>
+    <td><input type="text" placeholder="Camiseta" name="camiseta" id="camiseta" [(ngModel)]="inputTshirt"></td>
+    <td><input type="text" placeholder="Campeonatos" name="campeonatos" id="campeonatos"
+        [(ngModel)]="inputChampionship"></td>
+    <td><input type="number" placeholder="Equipo" name="equipo" id="equipo" [(ngModel)]="inputTeam"></td>
+    <td><input type="text" placeholder="codigoEquipo" name="codigoEquipo" id="codigoEquipo" [(ngModel)]="inputCodeTeam">
+    </td>
+    <td><input type="text" placeholder="nombreEquipo" name="nombreEquipo" id="nombreEquipo" [(ngModel)]="inputNameTeam">
+    </td>
+
+  </tr>
+
+</table>
+<div class="container-button">
+  <div class="buttons">
+    <button type="submit" class="update" (click)="updatePlayer()">Actualizar</button>
+    <button class="delete" (click)="playerDelete()">Eliminar</button>
+  </div>
+  <div>
+    <button class="back-button" (click)="back()">Volver</button>
+  </div>
+</div>

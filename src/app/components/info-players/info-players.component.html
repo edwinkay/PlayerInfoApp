@@ -1,0 +1,27 @@
+<div class="container">
+  <table>
+    <tr>
+      <th>Id Jugador</th>
+      <th>Codigo</th>
+      <th>Nombres</th>
+      <th>Camiseta</th>
+      <th>Campeonato</th>
+      <th>Id Equipo</th>
+      <th>Codigo Equipo</th>
+      <th>Nombre Equipo</th>
+    </tr>
+    <tr>
+      <td>{{playerList.idJugador}}</td>
+      <td>{{playerList.codigo}}</td>
+      <td>{{playerList.nombres}}</td>
+      <td>{{playerList.camiseta}}</td>
+      <td>{{playerList.campeonatos}}</td>
+      <td>{{playerList.idEquipo}}</td>
+      <td>{{playerList.codigoEquipo}}</td>
+      <td>{{playerList.nombreEquipo}}</td>
+    </tr>
+
+  </table>
+  <span> <a [routerLink]="['/update', indice]" [queryParams]="{accion:'1'}">Modificar o eliminar Lista</a></span>
+</div>
+
